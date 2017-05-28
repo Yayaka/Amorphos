@@ -1,6 +1,6 @@
 # Yayaka Protocol
 
-Yayaka Protocol is a yet another protocol for highly distributed social blogging.
+Yayaka Protocol is a yet another protocol for highly distributed social blogging and more.
 It enables each instances not to have to implement all functions of distributed social blogging.
 
 Yayaka Protocol is inspired by [HVDSGM (ja)](https://hakabahitoyo.wordpress.com/2017/05/22/hvdsgm/).
@@ -10,8 +10,8 @@ Currently, Yayaka Protocol is not have a version to release because it's unfinis
 
 ## Features
 
-- Each servers don't have to implement all functions of distributed social blogging.
-- Extensible by layered subprotocols.
+- Minimum specification
+- Extensible by layered and recursive subprotocols
 - JSON
 
 
@@ -26,7 +26,7 @@ Yayaka Protocol allows them to be distributed into multiple hosts.
 ### Layered subprotocols
 
 Layered subprotocols allow us to create additional ways to communicate between two different hosts,
-types of events, and types of contents.
+services which are different from yayaka services, types of events, and types of contents.
 
 
 ## Specification

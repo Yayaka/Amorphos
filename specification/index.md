@@ -4,13 +4,14 @@
 
 This is a glossary of the basic terms in Yayaka Protocol.
 
-### Yayaka services
+### Services
 
-*Yayaka services* are sets of related functions which can perform as one service.
+*Services* are sets of related functions which can perform as one service.
+They can be united on a same host and also be distributed into multiple hosts.
 
 ### Host
 
-A *host* is a server which implements one or more yayaka services and has a unique hostname.
+A *host* is a server which implements one or more services and has a unique hostname.
 
 ### User
 
@@ -19,63 +20,33 @@ A *user* is registered at a host's *Identity service*.
 
 ## Communication
 
-Layers to communicate between two host or two yayaka services.
+Layers to communicate between two host or two services.
 
-### [Host informations](host-informations.md)
+To tell the truth, this section is an only essential part of Yayaka Protocol specification.
+Other sections are treated as a reserved subprotocols
 
-*Host informations* show the specification of a host.
+### [Host metadata](host-metadata.md)
 
 ### [Connection](connection.md)
 
-Each hosts must establish a *connection* first to communicate.
-
 ### [Packet](packet.md)
 
-A *packet* is a JSON data transferred between two different hosts under a connection.
-
 ### [Message](message.md)
-
-A *message* is a JSON data transfered between two yayaka services.
-
-
-## Yayaka services
-
-There are following 5 services.
-
-### [Identity service](identity-service.md)
-
-*Identity service* works like a ID provider.
-
-### [Repository service](repository-service.md)
-
-*Repository service* works like a blogging service.
-
-### [Social Graph service](social-graph-service.md)
-
-*Social Graph service* stores users' relations and deliver events to followers.
-
-### [Multimedia service](multimedia-service.md)
-
-*Multimedia service* stores multimedia contents like images, movies, and so on.
-
-### [Presentation service](presentation-service.md)
-
-*Presentation service* works like an API client.
 
 
 ## Layered subprotocols
 
-There are following types of subprotocol.
-They have theirs own namespaces.
+There are following types of subprotocol and they have theirs own namespaces which is case-insensitive.
+Root subprotocols can have owned services and all subprotocols can allow their categorised subprotocols.
 
 ### [Connection subprotocol](connection-subprotocol.md)
 
-*Connection subprotocol* specifies how to authenticate a host from other host.
-
 ### [Message subprotocol](message-subprotocol.md)
 
-*Message subprotocol* specifies additional types of events.
 
-### [Text subprotocol](text-subprotocol.md)
+## Reserved subprotocols
 
-*Text subprotocol* specifies additional types of contents.
+### [Yayaka subprotocol](yayaka-subprotocol.md)
+
+*Yayaka subprotocol* is a message subprotocol
+which provides several services and messages for highly distributed social blogging.
