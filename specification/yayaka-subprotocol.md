@@ -39,6 +39,6 @@ Each user can authenticate any number of presentation host users.
 
 ## Subprotocols
 
-### Presentation subprotocol
+### Presentation protocol
 
-A *presentation subprotocol* specifies additional types of contents to show.
+A *presentation protocol* specifies additional types of contents to show.

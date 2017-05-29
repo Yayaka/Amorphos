@@ -18,7 +18,7 @@ A <i>host</i> is a server which implements any number of services and has a uniq
 
 <dt>Protocol
 <dd>
-We call a message subprotocol just "a protocol" for convenience.
+We call message subprotocols just "protocols" for convenience.
 A <i>protocol</i> specifies own services and types of messages.
 
 <dt>Service
@@ -47,16 +47,15 @@ Other sections are treated as a reserved subprotocols
 ## Layered subprotocols
 
 There are following types of subprotocol and they have theirs own namespaces which is case-insensitive.
-Root subprotocols can have owned services and all subprotocols can allow their categorised subprotocols.
 
-### [Connection subprotocol](connection-subprotocol.md)
+### [Connection protocol](connection-protocol.md)
 
-### [Message subprotocol](message-subprotocol.md)
+### [Message protocol](message-protocol.md)
 
 
 ## Reserved subprotocols
 
 ### [Yayaka subprotocol](yayaka-subprotocol.md)
 
-*Yayaka subprotocol* is a message subprotocol
+*Yayaka subprotocol* is a message protocol
 which provides several services and messages for highly distributed social blogging.
