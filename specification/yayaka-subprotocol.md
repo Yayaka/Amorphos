@@ -36,3 +36,9 @@ A *presentation service* is an application having a user interface.
 It collects and subscribes timeline posts and notifications.
 
 Each user can authenticate any number of presentation host users.
+
+## Subprotocols
+
+### Presentation subprotocol
+
+A *presentation subprotocol* specifies additional types of contents to show.

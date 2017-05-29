@@ -1,31 +1,41 @@
 # Yayaka Protocol Specification
 
+## Inctroduction
+
+Yayaka Protocol is a yet another protocol for highly distributed web applications especially social blogging.
+It enables each instances not to have to implement all functions of distributed web application.
+
+Yayaka Protocol focuses on minimum specification and higher extensibility by subprotocols.
+
 ## Glossary
 
 This is a glossary of the basic terms in Yayaka Protocol.
 
-### Services
+<dl>
+<dt>Host
+<dd>
+A <i>host</i> is a server which implements any number of services and has a unique hostname.
 
-*Services* are sets of related functions which can perform as one service.
+<dt>Protocol
+<dd>
+We call a message subprotocol just "a protocol" for convenience.
+A <i>protocol</i> specifies own services and types of messages.
+
+<dt>Service
+<dd>
+A <i>service</i> is a set of related functions which can perform as one service.
 They can be united on a same host and also be distributed into multiple hosts.
-
-### Host
-
-A *host* is a server which implements one or more services and has a unique hostname.
-
-### User
-
-A *user* is registered at a host's *Identity service*.
+</dl>
 
 
 ## Communication
 
-Layers to communicate between two host or two services.
+There are several layers to communicate between two host or two services.
 
 To tell the truth, this section is an only essential part of Yayaka Protocol specification.
 Other sections are treated as a reserved subprotocols
 
-### [Host metadata](host-metadata.md)
+### [Host](host.md)
 
 ### [Connection](connection.md)
 
