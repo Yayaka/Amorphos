@@ -80,7 +80,7 @@ A request message have following properties.
 
 #### Example
 
-```
+```json
 {
   "sender": {
     "host": "host1.example.com",
@@ -140,7 +140,7 @@ An answer message SHOULD have properties, **protocol** and **service**, if the *
 
 #### Example
 
-```
+```json
 {
   "sender": {
     "host": "host2.example.com",

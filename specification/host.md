@@ -43,7 +43,7 @@ A packet is an object have following properties.
 
 ### Example
 
-```
+```json
 {
   "yayaka-version": "1.0.0",
   "host-version": "1.0.0",
@@ -70,7 +70,7 @@ A packet is an object have following properties.
       "parameters": {
         "presentation-protocols": {
           "github-flavored-markdown": {
-            "version": "1.0.0",
+            "version": "1.0.0"
           }
         }
       }
