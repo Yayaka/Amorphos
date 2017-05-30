@@ -30,7 +30,7 @@ They can be united on a same host and also be distributed into multiple hosts.
 
 ## Communication
 
-There are several layers to communicate between two host or two services.
+There are several layers to communicate between two hosts or two services.
 
 To tell the truth, this section is an only essential part of Yayaka Protocol specification.
 Other sections are treated as a reserved subprotocols
