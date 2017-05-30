@@ -6,22 +6,22 @@ It is transferred by a packet if the two services are on different hosts.
 
 ## Types of messages
 
-There is two types of messages, request messages and answer messages.
+There are two types of messages, request messages and answer messages.
 Request messages is a basic type of messages and answer messages is a type for replying to a message.
 
 
 ## Layered message routing
 
-Each request messages have the keys to routing, **host**, **protocol**, **service**, and **action**.
-They are send to proper message handlers by the following procedure.
+Each request messages have the properties to routing, **host**, **protocol**, **service**, and **action**.
+They are sent to proper message handlers by the following procedure.
 
 1. A connection sends a messages to the specified **host**.
 2. The **host** routes the message to the specified **protocol**.
 3. The **protocol** routes the message to the specified **service**.
 4. The **service** routes the message to the handler to handle the specified **action**.
 
-Each answer messages have the keys to routing, **host**, **reply_to**.
-They are send to proper message callers by the following procedure.
+Each answer messages have the properties to routing, **host**, **reply_to**.
+They are sent to proper message callers by the following procedure.
 
 1. A connection sends a messages to the specified **host**.
 2. The **host** routes the message to the caller of a message which has specified "id".
