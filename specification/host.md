@@ -19,8 +19,12 @@ A packet is an object have following properties.
 - MUST **host-version** semver  
   The version of the specification of the host
 
-- MUST **connection-protocols** object  
-  An object which has following properties and uses the name of the connection protocol as a key
+- MUST **connection-protocols** array  
+  An array of objects which have following properties
+  Same connection protocols with different versions are allowed.
+
+  - MUST **name** string  
+    The name of the connection protocol
 
   - MUST **version** semver  
     The version of the connection protocol
@@ -29,8 +33,11 @@ A packet is an object have following properties.
     The parameters for the connection protocol
 
 - MUST **message-protocols** array  
-  An object which has following properties and uses the name of the message protocol as a key
   An array of objects which have following properties
+  Same message protocols with different versions are allowed.
+
+  - MUST **name** string  
+    The name of the connection protocol
 
   - MUST **version** semver  
     The version of the message protocol
@@ -47,24 +54,27 @@ A packet is an object have following properties.
 {
   "yayaka-version": "1.0.0",
   "host-version": "1.0.0",
-  "connection-protocols": {
-    "https-jwt": {
+  "connection-protocols": [
+    {
+      "name": "https-jwt",
       "version": "1.0.0",
       "parameters": {
         "connect-path": "/connect",
         "authenticate-path": "/authenticate"
       }
     },
-    "phoenix-channel": {
+    {
+      "name": "phoenix-channel",
       "version": "1.0.0",
       "parameters": {
         "websocket-path": "/socket/websocket",
         "topic-template": "remotes:{{host}}"
       }
     }
-  },
-  "message-protocols": {
-    "yayaka": {
+  ],
+  "message-protocols": [
+    {
+      "name": "yayaka",
       "version": "1.0.0",
       "services": ["identity", "repository", "social-graph"],
       "parameters": {
@@ -75,10 +85,11 @@ A packet is an object have following properties.
         }
       }
     },
-    "status": {
+    {
+      "name": "status",
       "version": "1.0.0",
       "services": ["monitor"]
     }
-  }
+  ]
 }
 ```

@@ -19,7 +19,7 @@ A packet is an object have following properties.
 
 ```
 {
-  messages: [
+  "messages": [
     {
       "sender": {
         "host": "host1.example.com",

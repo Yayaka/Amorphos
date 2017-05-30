@@ -1,11 +1,17 @@
 # Yayaka Protocol Specification
 
-## Inctroduction
+## Introduction
 
 Yayaka Protocol is a yet another protocol for highly distributed web applications especially social blogging.
 It enables each instances not to have to implement all functions of distributed web application.
 
 Yayaka Protocol focuses on minimum specification and higher extensibility by subprotocols.
+
+
+## Encoding
+
+Yayaka Protocol uses JSON format with UTF-8 encoding.
+
 
 ## Glossary
 
