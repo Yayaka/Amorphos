@@ -17,7 +17,7 @@ A packet is an object have following properties.
 
 ### Example
 
-```
+```json
 {
   "messages": [
     {
