@@ -47,7 +47,7 @@ A request message have following properties.
 #### Properties
 
 - MUST **sender** object  
-  An object have following properties
+  An object which has following properties
 
   - MUST **host** string  
     A sender host
@@ -107,7 +107,7 @@ An answer message SHOULD have properties, **protocol** and **service**, if the *
 #### Properties
 
 - MUST **sender** object  
-  An object MUST, MAY, or SHOULD have following properties.
+  An object which has following properties
 
   - MUST **host** string  
     A sender host
