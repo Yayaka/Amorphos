@@ -30,7 +30,7 @@ Each user can authenticate any number of hosts as a repository service.
 
 ### Social graph service
 
-A *social Graph service* stores users' relations and deliver events to followers.
+A *social graph service* stores users' relations and deliver events to followers.
 
 Each user can authenticate only one host as a social graph service.
 
@@ -61,7 +61,7 @@ An action to create a user.
 
 #### update-user-attributes
 
-An action to update the user profile.
+An action to update user attributes.
 
 - Destination MUST be an identity service.
 - Sender MUST be trusted by the user.
@@ -75,7 +75,7 @@ An action to update the user profile.
 
 #### delete-user-attributes
 
-An action to update the user profile.
+An action to delete user attributes.
 
 - Destination MUST be an identity service.
 - Sender MUST be trusted by the user.
