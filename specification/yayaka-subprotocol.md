@@ -200,6 +200,16 @@ An action to fetch events.
     - MUST **protocols** array
     - MUST **types** array
 
+#### create-content
+
+An action to create a content.
+
+- Destination MUST be a repository service.
+- Payload have following properties.
+  - MUST **protocol** string
+  - MUST **type** string
+  - MUST **content** object
+
 #### fetch-content
 
 An action to fetch a content.
@@ -309,6 +319,20 @@ An action to extend a subscription.
 - Payload have following properties.
   - MUST **subscription-id** string
   - MUST **available-seconds** integer
+
+#### notify-events
+
+An action to notify services of events
+
+- Sender MUST be a social graph service.
+- Payload have following properties.
+  - MUST **event-id** string
+  - MUST **host** string
+  - MUST **user-id** string
+  - MUST **protocol** string
+  - MUST **type** string
+  - MUST **parameters** object
+
 
 ## Subprotocols
 
