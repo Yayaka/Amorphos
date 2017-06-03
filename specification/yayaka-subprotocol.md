@@ -56,8 +56,14 @@ An action to create a user.
   - MAY **attributes** array  
     An array of objects which have following properties.
     - MUST **protocol** string
-    - MUST **attribute** string
+    - MUST **key** string
     - MUST **value** string
+
+##### Answer
+
+An answer for this action have a payload which has following properties.
+
+- MUST **succeeded** bool
 
 #### update-user-attributes
 
@@ -70,7 +76,7 @@ An action to update user attributes.
   - MAY **attributes** array  
     An array of objects which have following properties.
     - MUST **protocol** string
-    - MUST **attribute** string
+    - MUST **key** string
     - MUST **value** string
 
 #### delete-user-attributes
@@ -84,7 +90,7 @@ An action to delete user attributes.
   - MAY **attributes** array  
     An array of objects which have following properties.
     - MUST **protocol** string
-    - MUST **attribute** string
+    - MUST **key** string
 
 #### fetch-user
 
@@ -97,6 +103,7 @@ An action to fetch user's profile and trust list.
 #### get-token
 
 An action to fetch a token for trust a service by a user.
+Each identity services MUST return different tokens for each hosts.
 
 - Destination MUST be an identity service.
 - Sender MUST be from the same host.
@@ -139,17 +146,6 @@ An action to revoke a trust.
   - MUST **protocol** string
   - MUST **service** string
 
-#### check-trust
-
-An action to check wheather a service is trusted or not.
-
-- Destination MUST be an identity service.
-- Payload have following properties.
-  - MUST **user-id** string
-  - MUST **host** string
-  - MUST **protocol** string
-  - MUST **service** string
-
 #### create-event
 
 An action to add an event.
@@ -157,7 +153,7 @@ An action to add an event.
 - Destination MUST be a repository service.
 - Sender MUST be trusted by the user.
 - Payload have following properties.
-  - MUST **host** string
+  - MUST **identity-host** string
   - MUST **user-id** string
   - MUST **protocol** string
   - MUST **type** string
@@ -171,7 +167,7 @@ An action to broadcast an event.
 - Sender MUST be trusted by the user.
 - Payload have following properties.
   - MUST **event-id** string
-  - MUST **host** string
+  - MUST **identity-host** string
   - MUST **user-id** string
   - MUST **protocol** string
   - MUST **type** string
@@ -195,10 +191,13 @@ An action to fetch events.
     An array of objects which have following properties.
     - MUST **users** array  
       An array of objects which have following properties.
-      - MUST **host** string
+      - MUST **identity-host** string
       - MUST **user-id** string
     - MUST **protocols** array
     - MUST **types** array
+    - MAY **older-than** string
+      An ID of a event
+    - MUST **count** integer
 
 #### create-content
 
@@ -218,50 +217,65 @@ An action to fetch a content.
 - Payload have following properties.
   - MUST **content-id** object
 
-#### follow-user
+#### subscribe-repository
 
-An action to follow a user.
+An action to subscribe a repository.
 
-- Destination MUST be a social graph service.
-- Sender MUST be trusted by the user.
-- Payload have following properties
-  - MUST **user-id** string
-  - MUST **host** string
-  - MUST **target-user-id** string
+- Destination MUST be a repository service.
+- Payload have following properties.
+  - MUST **identity-host**
+  - MUST **user-id**
 
-#### unfollow-user
+#### follow-social-graph
 
-An action to unfollow a user.
+An action to follow a social graph service.
 
 - Destination MUST be a social graph service.
 - Sender MUST be trusted by the user.
 - Payload have following properties
+  - MUST **identity-host** string
   - MUST **user-id** string
-  - MUST **host** string
+  - MUST **target-identity-host** string
   - MUST **target-user-id** string
+  - MUST **social-graph-host** string
 
-#### follow-remote-user
+#### unfollow-social-graph
 
-An action to follow a remote user.
+An action to unfollow a social graph service.
+
+- Destination MUST be a social graph service.
+- Sender MUST be trusted by the user.
+- Payload have following properties
+  - MUST **identity-host** string
+  - MUST **user-id** string
+  - MUST **target-identity-host** string
+  - MUST **target-user-id** string
+  - MUST **social-graph-host** string
+
+#### follow-remote-social-graph
+
+An action to follow a remote social graph service.
 
 - Destination MUST be a social graph service.
 - Sender MUST be a social graph service.
 - Sender MUST be trusted by the user.
 - Payload have following properties
+  - MUST **identity-host** string
   - MUST **user-id** string
-  - MUST **host** string
+  - MUST **target-identity-host** string
   - MUST **target-user-id** string
 
-#### unfollow-remote-user
+#### unfollow-remote-social-graph
 
-An action to unfollow a remote user.
+An action to unfollow a remote social graph service.
 
 - Destination MUST be a social graph service.
 - Sender MUST be a social graph service.
 - Sender MUST be trusted by the user.
 - Payload have following properties
+  - MUST **identity-host** string
   - MUST **user-id** string
-  - MUST **host** string
+  - MUST **target-identity-host** string
   - MUST **target-user-id** string
 
 #### fetch-user-relations
@@ -270,6 +284,7 @@ Ac action to fetch the relations of a user.
 
 - Destination MUST be a social graph service.
 - Payload have following properties
+  - MUST **identity-host** string
   - MUST **user-id** string
 
 #### collect-events
@@ -282,12 +297,13 @@ An action to collect events.
     An array of objects which have following properties.
     - MUST **users** array  
       An array of objects which have following properties.
-      - MUST **host** string
+      - MUST **identity-host** string
       - MUST **user-id** string
     - MUST **protocols** array
     - MUST **types** array
+    - MUST **count** integer
 
-#### subscribe-evnets
+#### subscribe-events
 
 An action to request and subscribe events.
 
@@ -298,10 +314,11 @@ An action to request and subscribe events.
     An array of objects which have following properties.
     - MUST **users** array  
       An array of objects which have following properties.
-      - MUST **host** string
+      - MUST **identity-host** string
       - MUST **user-id** string
     - MUST **protocols** array
     - MUST **types** array
+    - MUST **count** integer
 
 #### unsubscribe-events
 
@@ -320,14 +337,24 @@ An action to extend a subscription.
   - MUST **subscription-id** string
   - MUST **available-seconds** integer
 
+#### add-repository-subscription
+
+An action to add a subscription to a repository service.
+
+- Destination MUST be a social graph service.
+- Payload have following properties.
+  - MUST **identity-host**
+  - MUST **user-id**
+  - MUST **repository-host**
+
 #### notify-events
 
-An action to notify services of events
+An action to notify services of events.
 
 - Sender MUST be a social graph service.
 - Payload have following properties.
   - MUST **event-id** string
-  - MUST **host** string
+  - MUST **identity-host** string
   - MUST **user-id** string
   - MUST **protocol** string
   - MUST **type** string
