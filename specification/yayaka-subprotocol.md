@@ -226,6 +226,15 @@ An action to subscribe a repository.
   - MUST **identity-host**
   - MUST **user-id**
 
+#### unsubscribe-repository
+
+An action to unsubscribe a repository.
+
+- Destination MUST be a repository service.
+- Payload have following properties.
+  - MUST **identity-host**
+  - MUST **user-id**
+
 #### follow-social-graph
 
 An action to follow a social graph service.
@@ -340,6 +349,16 @@ An action to extend a subscription.
 #### add-repository-subscription
 
 An action to add a subscription to a repository service.
+
+- Destination MUST be a social graph service.
+- Payload have following properties.
+  - MUST **identity-host**
+  - MUST **user-id**
+  - MUST **repository-host**
+
+#### remove-repository-subscription
+
+An action to remove a subscription to a repository service.
 
 - Destination MUST be a social graph service.
 - Payload have following properties.
