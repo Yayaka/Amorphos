@@ -6,15 +6,15 @@
 
 ### [WIP] Endpoint
 
-It may provided with the path "/.well-known/yayaka".
+It may provided with the path "/.well-known/ymp".
 
 ### JSON format
 
 A packet is an object have following properties.
 
 
-- MUST **yayaka-version** semver  
-  The version of Yayaka Protocol
+- MUST **ymp-version** semver  
+  The version of YMP
 
 - MUST **host-version** semver  
   The version of the specification of the host

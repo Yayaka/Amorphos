@@ -1,21 +1,21 @@
-# Yayaka Protocol Specification
+# YMP Specification
 
 ## Introduction
 
-Yayaka Protocol is a yet another protocol for highly distributed web applications especially social blogging.
-It enables each instances not to have to implement all functions of distributed web application.
+YMP is a messaging protocol for highly distributed web applications.
+It enables each instances not to have to implement all functions of an application.
 
-Yayaka Protocol focuses on minimum specification and higher extensibility by subprotocols.
+YMP focuses on minimum specification and higher extensibility by subprotocols.
 
 
 ## Encoding
 
-Yayaka Protocol uses JSON format with UTF-8 encoding.
+YMP uses JSON format with UTF-8 encoding.
 
 
 ## Glossary
 
-This is a glossary of the basic terms in Yayaka Protocol.
+This is a glossary of the basic terms in YMP.
 
 <dl>
 <dt>Host
@@ -41,9 +41,6 @@ They can be united on a same host and also be distributed into multiple hosts.
 
 There are several layers to communicate between two hosts or two services.
 
-To tell the truth, this section is an only essential part of Yayaka Protocol specification.
-Other sections are treated as a reserved subprotocols
-
 ### [Host](host.md)
 
 ### [Connection](connection.md)
@@ -60,11 +57,3 @@ There are following types of subprotocol and they have theirs own namespaces whi
 ### [Connection protocol](connection-protocol.md)
 
 ### [Message protocol](message-protocol.md)
-
-
-## Reserved subprotocols
-
-### [Yayaka subprotocol](yayaka-subprotocol.md)
-
-*Yayaka subprotocol* is a message protocol
-which provides several services and messages for highly distributed social blogging.

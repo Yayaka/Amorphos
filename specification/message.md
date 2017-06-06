@@ -35,7 +35,7 @@ They also MAY ignore messages at any time if one or more of **host**, **protocol
 
 ## Timeout
 
-Yayaka Protocol doesn't specify about timeout of messages.
+YMP doesn't specify about timeout of messages.
 
 
 ## JSON format
@@ -52,10 +52,10 @@ A request message have following properties.
   - MUST **host** string  
     A sender host
 
-  - SHOULD **protocol** string  
+  - MUST **protocol** string  
     A sender protocol
 
-  - SHOULD **service** string  
+  - MUST **service** string  
     A sender service
 
 - MUST **id** string  
@@ -71,7 +71,7 @@ A request message have following properties.
   A destination service
 
 - MUST **action** string  
-  The text to describe the message
+  A destination action
 
 - MUST **payload** object  
   The body of the message
@@ -100,9 +100,7 @@ A request message have following properties.
 
 ### Answer
 
-Big differences with request messages are answer messages have **reply_to** property and don't have **action** property.
-
-An answer message SHOULD have properties, **protocol** and **service**, if the **sender** property of the message to reply includes the properties.
+Difference of answer messages from request messages are they have **reply-to** property.
 
 #### Properties
 
@@ -112,10 +110,10 @@ An answer message SHOULD have properties, **protocol** and **service**, if the *
   - MUST **host** string  
     A sender host
 
-  - SHOULD **protocol** string  
+  - MUST **protocol** string  
     A sender protocol
 
-  - SHOULD **service** string  
+  - MUST **service** string  
     A sender service
 
 - MUST **id** string  
@@ -127,11 +125,14 @@ An answer message SHOULD have properties, **protocol** and **service**, if the *
 - MUST **host** string  
   A destination host
 
-- MAY **protocol** string  
+- MUST **protocol** string  
   A destination protocol
 
-- MAY **service** string  
+- MUST **service** string  
   A destination service
+
+- MUST **action** string  
+  A destination action
 
 - MUST **payload** object  
   The body of the message
