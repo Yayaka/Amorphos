@@ -5,7 +5,15 @@
 
 ## Specification
 
-A specification of message protocol MUST contain its name, its version, a list of services, and list of actions and MAY contain parameters to configure.
+A specification of message protocol contains following descriptions:
+
+- MUST its name
+- MUST its version
+- MUST list of services
+- MUST list of actions
+- MUST timeout and retransmission strategy
+- MAY parameters to configure.
+
 A name, services, and actions SHOULD match the regular expression "[a-z0-9-]+" and a version MUST be a semver.
 
 

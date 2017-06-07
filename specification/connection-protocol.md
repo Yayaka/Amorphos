@@ -4,5 +4,11 @@
 
 ## Specification
 
-A specification of connection protocol MUST contain a name and a version and MAY contain parameters to configure.
+A specification of connection protocol contains following descriptions:
+
+- MUST its name
+- MUST its version
+- MUST how to establish a connection and how to transmit
+- MAY parameters to configure.
+
 A name SHOULD match the regular expression "[a-z0-9-]" and A version MUST be a semver.
