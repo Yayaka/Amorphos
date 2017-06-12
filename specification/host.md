@@ -6,7 +6,7 @@
 
 ### [WIP] Endpoint
 
-It may provided with the path "/.well-known/ymp".
+It may provided with the path ".ymp" or "/.well-known/ymp".
 
 ### JSON format
 
@@ -15,9 +15,6 @@ A packet is an object have following properties.
 
 - MUST **ymp-version** semver  
   The version of YMP
-
-- MUST **host-version** semver  
-  The version of the specification of the host
 
 - MUST **connection-protocols** array  
   An array of objects which have following properties
@@ -53,7 +50,6 @@ A packet is an object have following properties.
 ```json
 {
   "yayaka-version": "1.0.0",
-  "host-version": "1.0.0",
   "connection-protocols": [
     {
       "name": "https-jwt",
