@@ -29,21 +29,21 @@ A packet is an object have following properties.
   - MAY **parameters** object  
     The parameters for the connection protocol
 
-- MUST **message-protocols** array  
+- MUST **service-protocols** array  
   An array of objects which have following properties
-  Same message protocols with different versions are allowed.
+  Same service protocols with different versions are allowed.
 
   - MUST **name** string  
     The name of the connection protocol
 
   - MUST **version** semver  
-    The version of the message protocol
+    The version of the service protocol
 
   - MUST **services** array  
     An array of services provided in the host
 
   - MAY **parameters** object  
-    The parameters for the message protocol
+    The parameters for the service protocol
 
 ### Example
 
@@ -68,7 +68,7 @@ A packet is an object have following properties.
       }
     }
   ],
-  "message-protocols": [
+  "service-protocols": [
     {
       "name": "yayaka",
       "version": "1.0.0",

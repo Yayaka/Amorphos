@@ -23,12 +23,6 @@ This is a glossary of the basic terms in YMP.
 A <i>host</i> is a server which implements any number of services and has a unique hostname.
 </dd>
 
-<dt>Protocol
-<dd>
-We call message subprotocols just "protocols" for convenience.
-A <i>protocol</i> specifies own services and types of messages.
-</dd>
-
 <dt>Service
 <dd>
 A <i>service</i> is a set of related functions which can perform as one service.
@@ -56,4 +50,4 @@ There are following types of subprotocol and they have theirs own namespaces whi
 
 ### [Connection protocol](connection-protocol.md)
 
-### [Message protocol](message-protocol.md)
+### [Service protocol](service-protocol.md)

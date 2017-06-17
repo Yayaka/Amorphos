@@ -36,7 +36,7 @@ They also MAY ignore messages at any time if one or more of **host**, **protocol
 ## Timeout
 
 YMP doesn't specify about timeout of messages.
-It's specified in a message protocol.
+It's specified in a service protocol.
 
 
 ## JSON format
@@ -112,7 +112,7 @@ Difference of answer messages from request messages are they have **reply-to** p
     A sender host
 
   - MUST **protocol** string  
-    A sender protocol
+    A sender service protocol
 
   - MUST **service** string  
     A sender service
@@ -127,7 +127,7 @@ Difference of answer messages from request messages are they have **reply-to** p
   A destination host
 
 - MUST **protocol** string  
-  A destination protocol
+  A destination service protocol
 
 - MUST **service** string  
   A destination service
