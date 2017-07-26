@@ -1,26 +1,26 @@
-# YMP Specification
+# Amorphos Specification
 
 ## Introduction
 
-YMP is a messaging protocol for highly distributed web applications.
+Amorphos is a messaging protocol for highly distributed web applications.
 It enables each instances not to have to implement all functions of an application.
 
-YMP focuses on minimum specification and higher extensibility by subprotocols.
+Amorphos focuses on minimum specification and higher extensibility by subprotocols.
 
 
 ## Encoding
 
-YMP uses JSON format with UTF-8 encoding.
+Amorphos uses JSON format with UTF-8 encoding.
 
 
 ## Glossary
 
-This is a glossary of the basic terms in YMP.
+This is a glossary of the basic terms in Amorphos.
 
 <dl>
 <dt>Host
 <dd>
-A <i>host</i> is a server which implements any number of services and has a unique hostname.
+A <i>host</i> is a server which implements any number of services and has hostname and path like "example.com/foo/bar" which are unique.
 </dd>
 
 <dt>Service

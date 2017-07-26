@@ -1,7 +1,7 @@
 # Connection
 
 Each host must establish a *connection* first to communicate between two different hosts and transmit packets under the connection.
-YMP doesn't specify the details of how to do that and each connection protocols do.
+Amorphos doesn't specify the details of how to do that and each connection protocols do.
 
 ## Creating a connection
 

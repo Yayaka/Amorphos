@@ -1,18 +1,18 @@
-# YMP
+# Amorphos
 
-YMP, Yayaka Meta/Messaging Protocol, is a messaging protocol for distributed web application.
+Amorphos, is a messaging protocol for distributed web application.
 
 
 ## Features
 
 - Minimum specification
-- Extensible by layered and recursive subprotocols
+- Extensible by layered subprotocols
 - JSON
 
 
 ## Specification
 
-- [YMP Specification](specification/index.md).
+- [Amorphos Specification](specification/index.md).
 
 
 ## Contributing

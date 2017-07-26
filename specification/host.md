@@ -6,15 +6,15 @@
 
 ### [WIP] Endpoint
 
-It may provided with the path ".ymp" or "/.well-known/ymp".
+It may provided with the path "/.amorphos" or "/.well-known/amorphos".
 
 ### JSON format
 
 A packet is an object have following properties.
 
 
-- MUST **ymp-version** semver  
-  The version of YMP
+- MUST **amorphos-version** semver  
+  The version of Amorphos
 
 - MUST **connection-protocols** array  
   An array of objects which have following properties

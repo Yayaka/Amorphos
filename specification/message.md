@@ -35,7 +35,7 @@ They also MAY ignore messages at any time if one or more of **host**, **protocol
 
 ## Timeout
 
-YMP doesn't specify about timeout of messages.
+Amorphos doesn't specify about timeout of messages.
 It's specified in a service protocol.
 
 
