@@ -1,1 +1,1 @@
-# MOVED TO [GITLAB](https://github.com/yayaka/Amorphos)
+# MOVED TO [GITLAB](https://gitlab.com/yayaka/Amorphos)
